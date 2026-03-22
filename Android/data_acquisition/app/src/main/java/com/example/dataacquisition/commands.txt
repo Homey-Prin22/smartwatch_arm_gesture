@@ -1,0 +1,4 @@
+rm -rf ~/.gradle/caches/
+rm -rf ~/.gradle/daemon/
+./gradlew --stop
+./gradlew clean

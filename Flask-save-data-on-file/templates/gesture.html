@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .accept {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .reject {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ciao, {{ current_user.userid }}!</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <img src="{{ url_for('static', filename=image_fn) }}" alt="Flask Image" width="500">
+
+    <h2>Vuoi salvare i dati acquisiti per la gesture corrente?</h2>
+    <!--<img src="{{ url_for('static', filename=image_fn) }}" alt="Flask Image" width="300">-->
+    <div class="button-container">
+        <button class="accept" onclick="sendAction('accept')">Accetta</button>
+        <button class="reject" onclick="sendAction('reject')">Rifiuta</button>
+    </div>
+    
+    <script>
+        function sendAction(action) {
+            fetch('/confirm', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ action: action })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                // Redirect to the new page after the save is successful
+                setTimeout(function() {
+                    window.location.href = '/gesture'; // Change '/gesture' to your desired URL
+                }, 1000); // Wait for 1 second before redirecting
+            })
+            .catch(error => console.error('Errore:', error));
+        }
+    </script>
+
+</body>
+</html>

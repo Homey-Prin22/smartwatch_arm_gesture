@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.dataacquisition.app-mergeDebugResources-45:/layout/control_interface.xml",
+        "source": "com.example.dataacquisition.app-main-48:/layout/control_interface.xml"
+    },
+    {
+        "merged": "com.example.dataacquisition.app-mergeDebugResources-45:/layout/main_activity.xml",
+        "source": "com.example.dataacquisition.app-main-48:/layout/main_activity.xml"
+    },
+    {
+        "merged": "com.example.dataacquisition.app-mergeDebugResources-45:/layout/acquisition.xml",
+        "source": "com.example.dataacquisition.app-main-48:/layout/acquisition.xml"
+    }
+]

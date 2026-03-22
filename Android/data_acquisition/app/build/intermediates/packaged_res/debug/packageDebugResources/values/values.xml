@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+    <string name="app_name">HOMEY</string>
+    <string name="gcm_defaultSenderId" translatable="false">700119854981</string>
+    <string name="google_api_key" translatable="false">AIzaSyDY6o_eGYT60BXSmy4oU2k0FGCECY29i_0</string>
+    <string name="google_app_id" translatable="false">1:700119854981:android:18334cf9ae1128581b1eec</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDY6o_eGYT60BXSmy4oU2k0FGCECY29i_0</string>
+    <string name="google_storage_bucket" translatable="false">data-acquisition.appspot.com</string>
+    <string name="hello_world">Gesture</string>
+    <string name="project_id" translatable="false">data-acquisition</string>
+    <style name="Theme.DataAcquisition" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+    </style>
+</resources>
